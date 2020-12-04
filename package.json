@@ -1,0 +1,35 @@
+{
+  "name": "xtlog",
+  "version": "1.0.0",
+  "description": "fast and color log",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hxtruong6/xtlog.git"
+  },
+  "keywords": [
+    "xtlog",
+    "log",
+    "colorlog"
+  ],
+  "author": "hxtruong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hxtruong6/xtlog/issues"
+  },
+  "homepage": "https://github.com/hxtruong6/xtlog#readme",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
