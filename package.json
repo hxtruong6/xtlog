@@ -1,7 +1,7 @@
 {
   "name": "xtlog",
   "version": "1.0.0",
-  "description": "fast and color log",
+  "description": "fast typing and color console log",
   "publishConfig": {
     "access": "public"
   },
