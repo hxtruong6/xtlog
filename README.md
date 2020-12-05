@@ -19,7 +19,11 @@ require('xtlog').apply();
 ```
 
 # Roadmap 
-|Feature| Description|
-|Log with name file| log to console and display which file is logged
-|Write to file| save file when logging|
-|Lelve log| config level show log|
+
+| Status   |  Feature            | Description |
+| -------  | --------------------| ----------- |
+| &#9745;  |  Use `l`,`i`,`w`,`e` to log | `l`,`i`,`w`,`e` alter for `console.log/info/warn/error` |
+| &#9745;  |  Make global log style | Apply `console.log` has same style with `xtlog` |
+| &#9744;  |  Log with name file | log to console and display which file is logged |
+| &#9744;  |  Write to file      | save file when logging      |
+| &#9744;  |  Lelve log          | config level show log       |
