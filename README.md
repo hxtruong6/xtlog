@@ -17,3 +17,9 @@ If you want to overide `console.log`:
 ```js
 require('xtlog').apply();
 ```
+
+# Roadmap 
+|Feature| Description|
+|Log with name file| log to console and display which file is logged
+|Write to file| save file when logging|
+|Lelve log| config level show log|
