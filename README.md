@@ -17,6 +17,8 @@ If you want to overide `console.log`:
 ```js
 require('xtlog').apply();
 ```
+## Previous
+![xtlog terminal](https://user-images.githubusercontent.com/24609363/101238506-54b53480-3713-11eb-8da2-02d7338050f7.png)
 
 # Roadmap 
 
