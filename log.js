@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable no-console */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable prefer-rest-params */
 /* eslint-disable guard-for-in */
@@ -10,13 +12,14 @@ const ERROR = 'error';
 const WARN = 'warn';
 
 const COLOR = {
-  ORANGE: '#EE7000',
+  ORANGE: '#FF5733',
+  STRING: '#E5FFEA',
 };
 
 const normalize = (value) => {
   switch (typeof (value)) {
     case 'string':
-      return ` ${value}`;
+      return ` ${chalk.hex(COLOR.STRING)(value)}`;
     case 'object':
       if (Array.isArray(value)) {
         const s = JSON.stringify(value).split(',').join(', ');
@@ -65,24 +68,32 @@ const enhanceConsole = (method) => {
 
 let l; let e; let i; let w;
 [LOG, INFO, WARN, ERROR].forEach((method) => {
+  const newLog = enhanceConsole(method);
   switch (method) {
     case LOG:
-      l = enhanceConsole(method);
+      l = newLog;
       break;
     case INFO:
-      i = enhanceConsole(method);
+      i = newLog;
       break;
     case WARN:
-      w = enhanceConsole(method);
+      w = newLog;
       break;
     case ERROR:
-      e = enhanceConsole(method);
+      e = newLog;
       break;
     default:
-      l = enhanceConsole(method);
+      l = newLog;
   }
 });
 
+const apply = () => {
+  console[LOG] = l;
+  console[INFO] = i;
+  console[WARN] = w;
+  console[ERROR] = e;
+};
+
 module.exports = {
-  l, e, i, w,
+  l, e, i, w, apply,
 };
