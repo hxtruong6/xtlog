@@ -42,13 +42,13 @@ const enhanceConsole = (method) => {
     let logString = '';
 
     if (method === LOG) {
-      logString += chalk.bgBlueBright('[Log]');
+      logString += chalk.bgBlueBright(chalk.black('[Log]'));
     } else if (method === ERROR) {
-      logString += chalk.bgRedBright('[Error]');
+      logString += chalk.bgRedBright(chalk.black('[Error]'));
     } else if (method === INFO) {
-      logString += chalk.bgYellowBright('[Info]');
+      logString += chalk.bgYellowBright(chalk.black('[Info]'));
     } else if (method === WARN) {
-      logString += chalk.bgHex(COLOR.ORANGE)('[Warn]');
+      logString += chalk.bgHex(COLOR.ORANGE)(chalk.black('[Warn]'));
     }
 
     for (const i in arguments) {

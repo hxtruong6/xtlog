@@ -19,7 +19,7 @@
     "colorlog"
   ],
   "author": "hxtruong",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hxtruong6/xtlog/issues"
   },
