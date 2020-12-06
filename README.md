@@ -18,7 +18,7 @@ If you want to overide `console.log`:
 require('xtlog').apply();
 ```
 ## Previous
-![xtlog terminal](https://user-images.githubusercontent.com/24609363/101238506-54b53480-3713-11eb-8da2-02d7338050f7.png)
+![xtlog terminal for info log](https://user-images.githubusercontent.com/24609363/101283918-03d73600-3810-11eb-85b4-ac1efeba7341.png)
 
 # Roadmap 
 
@@ -28,4 +28,4 @@ require('xtlog').apply();
 | &#9745;  |  Make global log style | Apply `console.log` has same style with `xtlog` |
 | &#9744;  |  Log with name file | log to console and display which file is logged |
 | &#9744;  |  Write to file      | save file when logging      |
-| &#9744;  |  Lelve log          | config level show log       |
+| &#9744;  |  Level log          | config level show log       |

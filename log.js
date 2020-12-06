@@ -4,17 +4,14 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable guard-for-in */
 const chalk = require('chalk');
+const handleObjectLog = require('./objectLog');
 const { getCurrentTime } = require('./utils');
+const { COLOR } = require('./variables')
 
 const LOG = 'log';
 const INFO = 'info';
 const ERROR = 'error';
 const WARN = 'warn';
-
-const COLOR = {
-  ORANGE: '#FF5733',
-  STRING: '#E5FFEA',
-};
 
 const normalize = (value) => {
   switch (typeof (value)) {
@@ -24,15 +21,16 @@ const normalize = (value) => {
       if (Array.isArray(value)) {
         const s = JSON.stringify(value).split(',').join(', ');
 
-        return ` ${chalk.green(s[0])}${s.slice(1, s.length - 1)}${chalk.green(s[s.length - 1])}`;
+        return ` ${chalk.hex(COLOR.SQUARE_BRACKETS)(s[0])}${s.slice(1, s.length - 1)}${chalk.hex(COLOR.SQUARE_BRACKETS)(s[s.length - 1])}`;
       }
-      return `\n${JSON.stringify(value, null, 2)}`;
+      // return `\n${JSON.stringify(value, null, 2)}`;
+      return handleObjectLog(value);
     case 'boolean':
       return ` ${chalk.hex('#cf0073')(value)}`;
     case 'symbol':
       return ` ${chalk.hex('#cf5c00')(value)}`;
     case 'number':
-      return ` ${chalk.hex('#00cfc4')(value)}`;
+      return ` ${chalk.hex(COLOR.NUMBER)(value)}`;
     default:
       break;
   }
